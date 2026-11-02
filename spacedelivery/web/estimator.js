@@ -8,6 +8,7 @@ const PLANET_DISTANCE = {
   Neptune: 200,
 };
 
+
 const MODE_SPEED = {
   1: 10,   // NORMAL
   2: 25,   // TURBO

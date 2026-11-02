@@ -2,7 +2,7 @@ name: Build and test
 
 on:
   push:
-    branches: ["development"] # Triggered when a commit is pushed to the development branch
+    branches: ["development","main"] # Triggered when a commit is pushed to the development branch
 
 jobs:
   build:
@@ -19,6 +19,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          
+      - name: Run flake8
+        run: flake8 spacedelivery deployment_scripts tests --max-line-length=100
 
       # Installs the dependencies
       - name: Install Dependencies
